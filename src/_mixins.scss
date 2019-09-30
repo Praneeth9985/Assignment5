@@ -1,0 +1,33 @@
+@mixin set_Width_Height($width, $height) {
+    width: $width;
+    height: $height;
+  }
+  
+  @mixin navbar($width, $height, $float) {
+    @include set_Width_Height($width, $height);
+    float: $float;
+  }
+
+  @mixin Clearfix($clear:""){
+    clear:$clear;
+  }
+  
+  @mixin headers($color, $font-wt, $font-size, $line-ht: 0) {
+    color: $color;
+    font-weight:$font-wt;
+    font-size:$font-size;
+    line-height:$line-ht;
+  }
+  
+  @mixin socialmediaImage($value) {
+    background:url($socialmediaImage) -38px * $value 0;
+  }
+  
+  @mixin break($args...) {
+    //to use conditional statement
+    @if length($args) == 1 {
+      @media (max-width: nth($args, 1)) {
+        @content;
+      }
+    }
+  }

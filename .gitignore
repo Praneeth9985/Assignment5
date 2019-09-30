@@ -1,0 +1,5 @@
+# Every json file starting with package
+package*.json
+
+# Dependency modules
+node_modules/
