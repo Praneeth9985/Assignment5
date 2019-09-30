@@ -74,7 +74,7 @@
   
   body {
     > #content article img, >  .greybar{
-      @include break(659px) {
+      @include break(459px) {
         display:none;
       }
     }
